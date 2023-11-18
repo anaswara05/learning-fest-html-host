@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+</head>
+<body>
+    <h1>Dice Roller</h1>
+    <p>Click the button below to roll the dice.</p>
+    <button id="btn" >Roll the dice</button>
+    <script>
+       var x = document.getElementById("btn");
+       x.addEventListener("click", rollDice);
+        function rollDice() {
+        let m = 1 + Math.floor (Math.random() *6 )
+        window.alert(m); 
+        }
+    </script>
+</body>
+</html>

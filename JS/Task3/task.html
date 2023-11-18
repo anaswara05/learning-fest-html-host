@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI calculator</title>
+</head>
+
+<body style="display: flex;align-items:center;justify-content:center;flex-direction:column;height:90vh;">
+    <div class="container" style="display: flex;align-items:center;justify-content:center;flex-direction:column;">
+        <h2>EMI CALCULATOR</h2>
+        <label for="amount">Enter Amount </label>
+        <input type="number" name="amount" id="amount">
+        <label for="rate">Enter Rate </label>
+        <input type="number" name="rate" id="rate">
+        <label for="months">Enter number of Months </label>
+        <input type="number" name="months" id="months"><br>
+        <input type="button" value="Calculate" onclick="calculate()">
+        <h3 id="total"></h3>
+
+        <script>
+            function calculate() {
+                var amount = document.getElementById("amount").value;
+                var rate = document.getElementById("rate").value;
+                var months = document.getElementById("months").value;
+                var monthlyRate = rate / 12 / 100;
+                var power = Math.pow(1 + monthlyRate, months);
+                var emi = (amount * monthlyRate * power) / (power - 1);
+                document.getElementById("total").innerHTML ="EMI: "+emi.toFixed(2);
+            }
+    </script>
+</div>
+</body>
+</html>
