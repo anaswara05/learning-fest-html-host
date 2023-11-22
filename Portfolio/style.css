@@ -1,0 +1,136 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&family=Poppins:ital,wght@0,300;0,400;0,500;1,300&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    background-color: #212529;
+    z-index: 500;
+    height: 70px;
+    width: 100%;
+    position: fixed;
+}
+nav{ 
+    position: fixed;
+    width: 100%;
+    padding: 0 15px;
+    top: 4%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000; /* NEW */
+}
+
+nav ul{
+    /* calls ul inside nav */
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav li{
+    font-weight: 500;
+    font-size: 20px;
+    width: 100%;
+}
+nav a{
+    color: black;
+    margin: 5px;
+    padding: 5px;
+    transition: 0.2s; /* new */
+
+}
+
+a:link , a:visited , a:active{
+    text-decoration: none;
+}
+
+main{ /* NEw */
+    position: absolute;
+    width: 100%;
+}
+.opening{
+    background-image: linear-gradient( #212529 50%,#ffff 50%);
+    position: relative;
+    top: 28%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.avatar{
+    height: 250px;
+    width:250px;
+    border-radius: 50%;
+}
+
+
+.about p{
+    
+    padding-left: 26px;
+}
+.about p:first-letter{
+    font-size: 30px;
+}
+#proj{
+    margin-top: 250px;
+}
+#proj h2{
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+#proj .card{
+    margin: 20px;
+}
+
+#contact{
+    margin-top: 100px;
+    height: 500px;
+    width: 700px;
+}
+#contact h2{
+    margin-bottom: 20px;
+}
+.details h2{
+    color: #fff;
+    background-color: #000;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 1px #000;
+}
+footer{
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    background-color: #212529;
+    text-align: center;
+    height: 70px;
+    width: 100%;
+    padding: 20;
+}
+footer h6{
+    margin: 20px;
+    
+}
+@media only screen and (max-width: 600px) {
+    .opening{
+        
+    flex-direction: column;
+    }
+    .details{
+        text-align: center;
+    }
+    .details h2{
+        color: #000;
+        width:100%;
+        font-weight: 600;
+        
+    background-color: transparent;
+    }
+    .avatar{
+        transform: translateY(20px);
+        border: 1px solid #212529;
+        height: 150px;
+        width:150px;
+    }
+}
